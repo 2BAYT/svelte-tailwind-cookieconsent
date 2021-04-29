@@ -1,3 +1,1 @@
-## What is Svelte Modal
-
-Modal component
+## Svelte Tailwind Cookieconsent
