@@ -1,6 +1,6 @@
 {
     "name": "@2bayt/svelte-tailwind-cookieconsent",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Cookie consent made for Svelte and Tailwind projects",
     "main": "dist/index.js",
     "scripts": {
@@ -25,5 +25,10 @@
         "sirv-cli": "^1.0.0"
     },
     "module": "dist/index.mjs",
-    "svelte": "src/index.js"
+    "svelte": "src/index.js",
+    "files": [
+        "src",
+        "index.mjs",
+        "index.js"
+    ]
 }
