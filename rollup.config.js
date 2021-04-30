@@ -3,7 +3,9 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-    
+import sveltePreprocess from "svelte-preprocess";
+import css from 'rollup-plugin-css-only';
+
 const pkg = require('./package.json');
 
 const production = !process.env.ROLLUP_WATCH;
@@ -50,7 +52,14 @@ export default {
             },
           ],
         plugins: [
-            svelte(),
+            svelte({
+              preprocess: sveltePreprocess({ postcss: true }),
+              compilerOptions: {
+                // enable run-time checks when not in production
+                dev: !production
+              }
+            }),
+            css({ output: 'bundle.css' }),
             resolve({
               browser: true,
               dedupe: ['svelte']
