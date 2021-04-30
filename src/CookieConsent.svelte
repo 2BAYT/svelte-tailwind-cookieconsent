@@ -24,7 +24,7 @@
 
 
 {#if visible}
-    <div on:click={hide}>
+    <div class = "bg-red-500" on:click={hide}>
         CookieConsent
     </div>
 {/if}
