@@ -18,11 +18,6 @@
     
     onMount(async()=>{
 
-        console.log("CookieConsent onMount");
-        //setCookie("deneme",123);
-        let cookie = getCookie("deneme");
-        console.log(cookie);
-
         let cookieConsentGiven = getCookie("cookieConsentGiven");
 
         if(cookieConsentGiven == "true"){
