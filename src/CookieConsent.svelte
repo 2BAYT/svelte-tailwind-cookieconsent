@@ -2,7 +2,7 @@
     import { getCookie, setCookie } from "./cookieHelper";
     import { onMount } from "svelte";
 
-    let visible = true;
+    let visible = false;
 
     export let descriptionText;
     export let closeText;
@@ -19,9 +19,11 @@
     onMount(async()=>{
 
         let cookieConsentGiven = getCookie("cookieConsentGiven");
-
         if(cookieConsentGiven == "true"){
             visible = false;
+        }
+        if(cookieConsentGiven != "true"){
+            visible = true;
         }
     });
 
