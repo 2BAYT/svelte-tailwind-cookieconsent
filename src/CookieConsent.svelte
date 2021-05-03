@@ -39,9 +39,6 @@
 
 
 {#if visible}
-    <div class = "bg-red-500" on:click={hide}>
-        CookieConsent
-    </div>
     <div class="flex w-full fixed bottom-0 {bgColor} z-20">
         <div class="flex flex-row w-full px-10 md:px-20 py-6 items-center justify-between flex-wrap md:flex-nowrap">
             <p class="pl-0 md:pl-20 text-sm pr-0 md:pr-16 {descriptionTextColor} mt-4 md:mt-0">{descriptionText} <a class="underline cursor-pointer" href={cookiePolicyUrl}>{cookiePolicyText}</a></p>
