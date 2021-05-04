@@ -7,3 +7,7 @@ export function setCookie(key,value){
 export function getCookie(key){
     return Cookies.get(key);
 }
+
+export function removeCookie(key){
+    return Cookies.remove(key);
+}

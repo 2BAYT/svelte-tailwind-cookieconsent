@@ -15,6 +15,8 @@
     export let closeTextColor;
     export let buttonBgColor;
     export let buttonTextColor;
+
+    export let onCookieConsentAllowed=null;
     
     onMount(async()=>{
 
@@ -25,7 +27,6 @@
         }
     });
 
-
     function hide(){
         visible = false;
     }
@@ -33,6 +34,9 @@
     function allowButtonClicked(){
         setCookie("cookieConsentGiven",true);
         visible = false;
+        if(onCookieConsentAllowed){
+            onCookieConsentAllowed();
+        }
     }
 
 </script>
