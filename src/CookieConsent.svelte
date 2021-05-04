@@ -45,7 +45,7 @@
 {#if visible}
     <div class="flex w-full fixed bottom-0 {bgColor} z-20">
         <div class="flex flex-row w-full px-4 md:px-8 lg:px-20 xl:px-24 py-2 md:py-6 items-center justify-between flex-wrap md:flex-nowrap">
-            <p class="text-sm pr-0 md:pr-16 {descriptionTextColor} mt-4 md:mt-0">{descriptionText} <a class="underline cursor-pointer" href={cookiePolicyUrl}>{cookiePolicyText}</a></p>
+            <p class="text-sm pr-0 md:pr-8 {descriptionTextColor} mt-4 md:mt-0">{descriptionText} <a class="underline cursor-pointer" href={cookiePolicyUrl}>{cookiePolicyText}</a></p>
             <div class="flex flex-row space-x-6 mx-auto md:mx-0 mt-6 md:mt-0 items-center">
                 <p on:click={hide} class="text-sm cursor-pointer {closeTextColor} whitespace-nowrap">{closeText}</p>
                 <button on:click={()=>allowButtonClicked()} class="py-2 px-4 text-center whitespace-nowrap {buttonBgColor} {buttonTextColor} text-sm rounded-lg focus:outline-none">{allowButtonText}</button>
