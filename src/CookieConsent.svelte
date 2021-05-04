@@ -19,9 +19,7 @@
     onMount(async()=>{
 
         let cookieConsentGiven = getCookie("cookieConsentGiven");
-        if(cookieConsentGiven == "true"){
-            visible = false;
-        }
+        
         if(cookieConsentGiven != "true"){
             visible = true;
         }
