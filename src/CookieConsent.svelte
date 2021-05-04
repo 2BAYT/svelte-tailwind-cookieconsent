@@ -4,17 +4,17 @@
 
     let visible = false;
 
-    export let descriptionText;
-    export let closeText;
-    export let allowButtonText;
-    export let cookiePolicyUrl;
-    export let cookiePolicyText;
+    export let descriptionText = "";
+    export let closeText = "";
+    export let allowButtonText = "";
+    export let cookiePolicyUrl = "";
+    export let cookiePolicyText = "";
 
-    export let bgColor;
-    export let descriptionTextColor;
-    export let closeTextColor;
-    export let buttonBgColor;
-    export let buttonTextColor;
+    export let bgColor = "";
+    export let descriptionTextColor = "";
+    export let closeTextColor = "";
+    export let buttonBgColor = "";
+    export let buttonTextColor = "";
 
     export let onCookieConsentAllowed=null;
     
