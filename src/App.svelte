@@ -1,5 +1,5 @@
 <script>
-    import CookieConsent, {initCookieConsent} from "./CookieConsent.svelte";
+    import CookieConsent from "./CookieConsent.svelte";
     import { removeCookie } from "./cookieHelper";
     import { onMount } from "svelte";
 
