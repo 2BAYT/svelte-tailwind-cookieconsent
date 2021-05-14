@@ -1,9 +1,18 @@
-<script>
+<script context="module">
     import { getCookie, setCookie, refresh } from "./cookieHelper";
+
+    let cookieKey = "cookieConsentGiven";
+	
+    export function initCookieConsent(){
+        refresh(cookieKey);
+    }
+
+</script>
+
+<script>
     import { onMount } from "svelte";
 
     let visible = false;
-    let cookieKey = "cookieConsentGiven";
 
     export let descriptionText = "";
     export let closeText = "";
@@ -24,12 +33,7 @@
         if(!cookieConsentGiven){
             visible = true;
         }
-        initCookieConsent();
     });
-
-    export function initCookieConsent(){
-        refresh(cookieKey);
-    }
 
     function hide(){
         visible = false;

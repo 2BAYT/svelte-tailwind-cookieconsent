@@ -1,7 +1,12 @@
 <script>
-    import CookieConsent from "./CookieConsent.svelte";
+    import CookieConsent, {initCookieConsent} from "./CookieConsent.svelte";
     import { removeCookie } from "./cookieHelper";
-    
+    import { onMount } from "svelte";
+
+
+    onMount(async()=>{
+        initCookieConsent();
+    });
 
     function onRemoveCookieClicked(){
         removeCookie("cookieConsentGiven");
