@@ -1,8 +1,9 @@
 <script>
-    import { getCookie, setCookie } from "./cookieHelper";
+    import { getCookie, setCookie, refresh } from "./cookieHelper";
     import { onMount } from "svelte";
 
     let visible = false;
+    let cookieKey = "cookieConsentGiven";
 
     export let descriptionText = "";
     export let closeText = "";
@@ -19,20 +20,23 @@
     export let onCookieConsentAllowed=null;
     
     onMount(async()=>{
-
-        let cookieConsentGiven = getCookie("cookieConsentGiven");
-        
-        if(cookieConsentGiven != "true"){
+        let cookieConsentGiven = getCookie(cookieKey);
+        if(!cookieConsentGiven){
             visible = true;
         }
+        initCookieConsent();
     });
+
+    export function initCookieConsent(){
+        refresh(cookieKey);
+    }
 
     function hide(){
         visible = false;
     }
 
     function allowButtonClicked(){
-        setCookie("cookieConsentGiven",true);
+        setCookie(cookieKey,true);
         visible = false;
         if(onCookieConsentAllowed){
             onCookieConsentAllowed();
