@@ -3,7 +3,6 @@ import Cookies from 'js-cookie'
 
 export function refresh(key){
     let cookie = getCookie(key);
-    console.log(cookie);
     if(cookie){
         setCookie(key,cookie);
     }

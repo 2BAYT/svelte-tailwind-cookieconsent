@@ -1,6 +1,6 @@
 {
     "name": "svelte-tailwind-cookieconsent",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "description": "Cookie consent made for Svelte and Tailwind projects",
     "main": "dist/index.js",
     "scripts": {
