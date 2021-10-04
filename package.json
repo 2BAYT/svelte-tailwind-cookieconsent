@@ -8,7 +8,7 @@
         "dev": "rollup -c -w",
         "start": "sirv public --no-clear"
     },
-    "keywords": [],
+    "keywords": ["svelte","tailwind","cookie consent","cookieconsent"],
     "author": "2BAYT",
     "license": "ISC",
     "devDependencies": {
